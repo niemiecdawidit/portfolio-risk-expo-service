@@ -19,6 +19,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
     steps:
       - name: Set lowercase repository name
         run: echo "GH_REPO_LC=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
