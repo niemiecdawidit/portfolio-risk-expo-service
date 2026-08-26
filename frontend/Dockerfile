@@ -8,7 +8,7 @@ ARG NEXT_PUBLIC_API_URL=http://localhost:8080
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
 # Accept build argument for backend URL (for server-side requests)
-ARG BACKEND_URL=http://backend:8080
+ARG BACKEND_URL=https://cloud-run-spring-boot-backend-36155288499.europe-west1.run.app
 ENV BACKEND_URL=$BACKEND_URL
 
 # Copy package files
@@ -29,7 +29,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Accept runtime environment variable for backend URL
-ARG BACKEND_URL=http://backend:8080
+ARG BACKEND_URL=https://cloud-run-spring-boot-backend-36155288499.europe-west1.run.app
 ENV BACKEND_URL=$BACKEND_URL
 
 # Install dumb-init to handle signals properly
